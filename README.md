@@ -1,4 +1,4 @@
-# SMS-Weather-Alerter-Twilio-WeatherAPI-Integration-
+SMS-Weather-Alerter-Twilio-WeatherAPI-Integration-
 
 An automated Python script that fetches real-time, 5-day weather forecasts for a specific geographic coordinate and dispatches a localized weather summary text message directly to your phone utilizing the Twilio API gateway. 
 
