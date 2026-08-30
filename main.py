@@ -9,8 +9,8 @@ TWILIO_SID = os.environ.get('ACC_SID')
 TWILIO_TOKEN = os.environ.get('AUTH_TOK')
 
 # Target Phone Numbers and Configuration
-TWILIO_NUMBER = os.environ.get('TWILIO_NUMBER') # e.g., '+18313876061'
-MY_NUMBER = os.environ.get('MY_NUMBER')         # e.g., '+918019659595'
+TWILIO_NUMBER = os.environ.get('TWILIO_NUMBER')
+MY_NUMBER = os.environ.get('MY_NUMBER')      
 
 # Guard clause: stop execution if vital deployment configuration is missing
 if not all([WEATHER_KEY, TWILIO_SID, TWILIO_TOKEN, TWILIO_NUMBER, MY_NUMBER]):
@@ -18,7 +18,7 @@ if not all([WEATHER_KEY, TWILIO_SID, TWILIO_TOKEN, TWILIO_NUMBER, MY_NUMBER]):
     sys.exit(1)
 
 WEATHER_API_URL = 'http://api.weatherapi.com/v1/forecast.json'
-TARGET_COORDINATES = '18.8748343,77.9167345'  # Latitude, Longitude layout
+TARGET_COORDINATES = '18.8748343,77.9167345' Latitude, Longitude layout
 
 query_parameters = {
     'q': TARGET_COORDINATES,
