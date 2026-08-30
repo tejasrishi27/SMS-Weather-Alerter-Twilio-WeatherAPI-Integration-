@@ -14,7 +14,7 @@ MY_NUMBER = os.environ.get('MY_NUMBER')         # e.g., '+918019659595'
 
 # Guard clause: stop execution if vital deployment configuration is missing
 if not all([WEATHER_KEY, TWILIO_SID, TWILIO_TOKEN, TWILIO_NUMBER, MY_NUMBER]):
-    print("❌ Error: Missing configuration keys in environment variables.")
+    print("Error: Missing configuration keys in environment variables.")
     sys.exit(1)
 
 WEATHER_API_URL = 'http://api.weatherapi.com/v1/forecast.json'
@@ -42,10 +42,10 @@ def get_today_weather() -> str:
         return condition_text
         
     except requests.exceptions.RequestException as req_err:
-        print(f"❌ WeatherAPI request failed: {req_err}")
+        print(f"WeatherAPI request failed: {req_err}")
         return ""
     except (KeyError, IndexError):
-        print("❌ Unexpected data structure returned from WeatherAPI.")
+        print("Unexpected data structure returned from WeatherAPI.")
         return ""
 
 
